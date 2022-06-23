@@ -1,0 +1,148 @@
+*{box-sizing: border-box;}
+body{
+    background-color: #295872;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    text-shadow: 2px 4px 10px #000;
+}
+h1{
+    margin: 0px;
+    font-size: 40px;
+}
+.container{
+    display: flex;
+    max-width: 1000px;
+}
+/* left side */
+.leftSide{
+    flex: 1;
+    margin: 0 40px 0 0;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    text-shadow: 6px 4px 8px #000;
+    margin: 10px 0;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+    font-size: 20px;
+}
+input::placeholder{
+    font-size: 20px;
+    color: #fff
+}
+.btnCalc{
+    margin: 10px 0 3px 0;
+    background-color: #888;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btnCalc:hover{
+    opacity: 0.7;
+}
+
+/* right side */
+.container .rightSide{
+    flex: 1;
+    margin-left: 40px;
+    display: flex;
+}
+.grid{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20;
+}
+.rightResult{
+    flex: 1;
+    display: flex;
+
+}
+
+.back{
+    position: absolute;
+    background-color: #227c9d;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: -30px;
+    margin-top: 140px;
+    transition: .3s;
+}
+.back:hover{
+    opacity: 0.8;
+}
+
+.cr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 19px;
+}
+.cr p{
+    line-height: 1.8em;
+    text-align: center;
+}
+
+.cr a{
+    color: #fff;
+}
+
+/* responsividade */
+
+@media (max-width: 770px){
+    body{
+        background-size: 100%;
+    }
+    .container{
+        padding: 20px;
+        padding-top: 60px;
+        flex-direction: column;
+    }
+    .leftSide{
+        margin-right: 0;
+    }
+    .container .rightSide{
+        margin-left: 0px;
+    }
+    .grid{
+        gap: 0 !important;
+    }
+    .back{
+        margin: 5px 0 0 5px;
+        border-radius: 10px;
+    }
+}
+@media(max-width:576px){
+    .container{
+        padding-top: 120px;
+        flex-direction: column;
+    }
+}
+@media(max-width:439px){
+    .container{
+        padding-top: 250px;
+        flex-direction: column;
+    }
+}
